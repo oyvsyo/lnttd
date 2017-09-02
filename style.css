@@ -60,7 +60,6 @@ color: var(--color1);
     font-family: Verdana, Arial, Helvetica, sans-serif;
     font-size: 115%;
 }
-
 .nav-a ul {
     vertical-align: bottom;
 }
@@ -85,6 +84,11 @@ color: var(--color1);
     text-decoration: none;
     background-color: var(--nav-li-active);
     /*border: 1px solid rgb(190, 190, 190);*/
+}
+.brand a {
+    height: 50px;
+    padding: 10px;
+    color: black;
 }
 
 .nav-row {
@@ -117,6 +121,7 @@ img {
     padding-right: 20px;
     margin-bottom: 40px;
 }
+
 
 .header-site {
     width: 100%;
@@ -309,7 +314,7 @@ hr {
     background: var(--nav-li-active);
     width: 145%;
     left: 25%;
-    top: 176px;
+    top: 191px;
 }
 
 .line-bellow-md {
