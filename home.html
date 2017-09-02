@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <style>
+         :root {
+            --color1: #1c1c24;
+            --color2: #e7ffed;
+            --nav_color: rgb(255, 255, 255);
+            --grey: rgb(228, 228, 228);
+            --nav-li-active: rgb(100, 233, 109);
+            --fullwidth: 100%;
+            --trasparent-grey: rgba(10, 10, 10, 0.55);
+        }
+
+        body {
+            font-family: Verdana, Arial, Helvetica, sans-serif;
+            font-size: 140%;
+            position: relative;
+            line-height: 1.6;
+        }
+
+        .brand-name {
+            padding-top: 15px;
+            font-size: 120%;
+            font-family: Verdana, Arial, Helvetica, sans-serif;
+            color: var(--color1);
+        }
+
+        .custom-nav {
+            background-color: var(--nav_color);
+            border-bottom: 1px solid var(--grey);
+        }
+
+        .h-cont {
+            padding-top: 10px;
+            padding-left: 30px;
+            font-family: Verdana, Arial, Helvetica, sans-serif;
+            list-style-type: none;
+            color: var(--color1);
+        }
+
+        .h-ul-cont {
+            list-style-type: none;
+        }
+        /*.ul-navbar {
+        list-style-type: none;
+        border: 1px solid #555;
+        color: var(--color1);
+    }*/
+
+        .b-top {
+            margin-top: 100px;
+            font-family: Verdana, Arial, Helvetica, sans-serif;
+            font-size: 115%;
+        }
+
+        .nav-a ul {
+            vertical-align: bottom;
+        }
+
+        .nav-a a {
+            color: rgb(42, 42, 42);
+            align-items: flex-end;
+            padding: 5px;
+        }
+
+        .navbar-nav>li>a {
+            padding-top: 8px;
+            padding-bottom: 8px;
+        }
+
+        .nav>li:hover {
+            text-decoration: none;
+            background-color: var(--grey);
+        }
+
+        .nav>li.active {
+            text-decoration: none;
+            background-color: var(--nav-li-active);
+            /*border: 1px solid rgb(190, 190, 190);*/
+        }
+
+        .nav-row {
+            border: none;
+        }
+
+        .icons {
+            text-align: center;
+            font-size: 110%;
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+
+        img {
+            width: 70px;
+            display: block;
+            margin: auto;
+        }
+
+        .slogan {
+            text-align: center;
+            /*text-shadow: 2px 2px #000000;*/
+            color: rgb(244, 246, 247);
+            background-color: rgba(10, 10, 10, 0.55);
+            margin-top: 200px;
+            margin-left: 30px;
+            margin-right: 30px;
+            padding: 10px;
+            padding-left: 20px;
+            padding-right: 20px;
+            margin-bottom: 40px;
+        }
+
+        .header-site {
+            width: 100%;
+            height: 400px;
+            background-image: url('https://static.pexels.com/photos/106344/pexels-photo-106344.jpeg');
+            background-size: cover;
+            margin-bottom: 30px;
+            /*border: 1px solid red;*/
+        }
+
+        .b-middle {
+            background-color: rgb(256, 256, 256);
+        }
+
+        .icon-bar {
+            background-color: var(--nav-li-active)
+        }
+
+        .item1 img {
+            height: 200px;
+            width: auto;
+        }
+
+        .item h4 {
+            text-align: center;
+        }
+
+        .about {
+            background-color: var(--grey);
+            border-radius: 5px;
+            padding: 10px;
+        }
+
+        h3 {
+            text-align: center;
+            color: white;
+            background-color: var(--nav-li-active);
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        #base div.row {
+            padding: 20px;
+        }
+
+        summary:focus {
+            /*outline-color: var(--nav-li-active);*/
+            outline-color: rgba(47, 9, 119, 0);
+        }
+
+        details[open] SUMMARY~* {
+            animation: sweep .5s ease-in-out;
+        }
+
+        details:not([open]) SUMMARY~* {
+            animation: sweep .5s ease-in-out;
+        }
+
+        @keyframes sweep {
+            0% {
+                opacity: 0;
+                margin-left: 0px
+            }
+            100% {
+                opacity: 1;
+                margin-left: 0px
+            }
+        }
+
+        .prilad-name {
+            /*background-color: var(--grey);*/
+            /*border-radius: 5px;*/
+            /*color: rgb(255, 255, 255);*/
+            width: 100%;
+            white-space: nowrap;
+            text-align: center;
+        }
+
+        hr {
+            border-color: var(--nav-li-active);
+            background-color: var(--nav-li-active);
+            color: var(--nav-li-active);
+        }
+
+        .container {
+            padding-bottom: 20px;
+        }
+
+        #map {
+            height: 400px;
+            width: 100%;
+            border-radius: 20px;
+            margin-top: 20px;
+            -webkit-transform: translate3d(0px, 0px, 0px);
+            -webkit-mask-image: -webkit-radial-gradient(white, black);
+        }
+
+        .cont {
+            text-align: center;
+            padding: 15px;
+            min-height: 228px;
+        }
+
+        .cont ul {
+            list-style-type: none;
+        }
+
+        .cont button {
+            position: absolute;
+            bottom: 0;
+            width: 72%;
+        }
+
+        .cont button:hover {
+            background-color: var(--nav-li-active);
+        }
+
+        #myCarousel {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border-radius: 20px;
+            width: 100%;
+            height: 400px;
+            background-image: url('https://static.pexels.com/photos/33972/pexels-photo.jpg');
+            background-color: rgba(133, 133, 133, 0.65);
+            background-size: cover;
+        }
+
+        .comment {
+            color: white;
+            background-color: rgba(10, 10, 10, 0.55);
+            /*margin: 7%;*/
+            height: 300px;
+            margin-top: 40px;
+
+            margin-right: 20%;
+            margin-left: 20%;
+            border-radius: 20px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            padding-right: 5%;
+            padding-left: 5%;
+        }
+
+        .scheme {
+            list-style-type: none;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-fixed-top" id="nav">
+        <div class="container-fluid custom-nav">
+            <div class="brand-name">
+                <h4>ООО “Лаборатория неразрушающего контроля и технической диагностики”</h4>
+            </div>
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+
+                <ul class="nav navbar-nav ul-navbar nav-a">
+                    <li><a href="#company">О КОМПАНИИ</a></li>
+                    <li><a href="#services">УСЛУГИ</a></li>
+                    <li><a href="#base">ПРИБОРНАЯ БАЗА</a></li>
+                    <li><a href="#comments">ОТЗЫВЫ</a></li>
+                    <li><a href="#contacts">КОНТАКТЫ</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="header-site">
+        <div class="container">
+            <div class="jumbotron slogan">
+                <h4>ООО «Лаборатория неразрушающего контроля и технической диагностики» - </h4>
+                <h4 style="font-size: 144%;">Ваша гарантия энергоэффективности</h4>
+                <!-- <h3>Ваша гарантия энергоэффективности</h3> -->
+            </div>
+        </div>
+    </div>
+    <div class="container" id="company">
+
+        <div class="row" style="padding-top: 30px;">
+            <div class="col-sm-4">
+                <img src="http://svgshare.com/i/2gP.svg">
+                <div class="icons">
+                    <p><b>5 минут</b> - среднее время обратного звонка от наших менеджеров после оставленной заявки</p>
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+                <img src="http://svgshare.com/i/2hZ.svg">
+                <div class="icons">
+                    <p><b>7 дней</b> - максимальный срок полного выполнения работ</p>
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+                <img src="http://svgshare.com/i/2gz.svg">
+                <div class="icons">
+                    <p>Экономия до <b>70%</b> энергоресурсов после работы наших специалистов</p>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-sm-3">
+                <img src="http://svgshare.com/i/2gg.svg">
+                <div class="icons">
+                    <p><b>10 профессиональных</b> энергоаудиторов с подтвержденной квалификацией</p>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <img src="http://svgshare.com/i/2iD.svg">
+                <div class="icons">
+                    <p><b>18 приборов</b> современного оборудования для проведения энергоаудита</p>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <img src="http://svgshare.com/i/2hY.svg">
+                <div class="icons">
+                    <p>Собственные <b>стационарные</b> и <b>мобильные</b> лаборатории</p>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <img src="http://svgshare.com/i/2i3.svg">
+                <div class="icons">
+                    <p>Проводим энергоаудит <b>более 120</b> объектов в месяц</p>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="jumbotron b-top">
+            Одними из самых актуальных проблем современного общества являются организация рациаонального энергопотребления и минимизация негативного воздействия на окружающую среду. Компания <b>ООО “Лаборатория неразрушающего контроля и технической диагностики”</b>            предоставляет как комплексные, так и локальные решения в сфере повышения уровня энергоэффективности объектов любой сложности
+        </div>
+
+        <div class="row">
+            <div class="col-sm-8">
+                <div class="jumbotron b-middle">
+                    <h4>МЫ ПРОВОДИМ</h4>
+
+                    <ul>
+                        <li>Энергоаудит частных домов и квартир</li>
+                        <li>Тепловизионное обследование </li>
+                        <li>Энергетический аудит предприятий</li>
+                        <li>Энергетический аудит многоквартирных домов </li>
+                        <li>Аудит электрических установок</li>
+                        <li>Экспертизу оборудования</li>
+                        <li>Предоставляем услуги по энергоконсалтингу</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="container-fluid">
+                    <h4>ЗАКАЗАТЬ</h4>
+                    <form action="/action_page.php">
+                        <div class="form-group">
+                            <label for="email">Електронная пошта:</label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="pwd">Номер телефона:</label>
+                            <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
+                        </div>
+                        <!-- <div class="checkbox">
+         <label><input type="checkbox" name="remember"> Remember me</label>
+       </div> -->
+                        <button type="submit" class="btn btn-default">Заказать</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="jumbotron">
+            <h4>Основные цели энергоаудита:</h4> Выявление основных затратных статей в энергетическом балансе предприятия: чаще всего предприятия расходуют впустую огромное количество энергии, не контролируя основные источники потерь энергии. Систематизация и визуализация того, где и как
+            тратится энергия. Итог проведения энергоаудита – клиент получает помимо энергетического паспорта/сертификата/отчета рекомендации по снижению затрат энергии, а также методы сокращения общего потребления энергии с детальными экономическими расчетами;
+            Снижение потребления энергии на любом предприятии – одна из актуальных задач, решение которой позволяет более эффективно управлять средствами. Снижение затрат на энергоресурсы приводит к снижению себестоимости продукции или услуги. </p>
+
+        </div>
+    </div>
+
+
+    <div class="container" id="services">
+        <div class="row">
+            <h3>Услуги</h3>
+            <h4>СХЕМА РАБОТЫ</h4>
+            <ul class="scheme">
+                <li>1. Заявка</li>
+                <li>2. Менеджер взязывается с Вами в течение 5 минут </li>
+                <li>3. Подготовка технического задания, определение основных целей и порядок работ</li>
+                <li>4. Заказ</li>
+                <li>5. Сбор исходных данных, измерения, обследования </li>
+                <li>6. Проведение технологического анализа состояния коммуникаций, в результате которого выявляются их слабые точки </li>
+                <li>7. Оценка приборов учета и систем измерения, установленных в квартире или здании, определение точности показателей </li>
+                <li>8. Анализ финансовой и технической информации, выявление необоснованных затрат на энергоресурсы </li>
+                <li>9. Разработка мероприятий по энергосбережению и повышению уровня энергоэффективности </li>
+                <li>10. Выдача энергетического паспорта/сертификата/отчета, передача заказчику конечных выводов и инструкций по оптимизации затрат </li>
+                <li>11. Оплата </li>
+            </ul>
+        </div>
+        <div class="serv">
+            Тепловизионное обследование Тепловизионное обследование позволяет выявить недостаточное утепление строительных конструкций, нарушения в швах и стыках между сборными конструкциями, дефекты перекрытий, утечки тепла через окна и остекленные участки зданий,
+            участки зданий с повышенной влажностью.  Строительная термография – мощное средство для проверки качества выполнения скрытых работ и выявления строительного брака.  Мы проводим теплоаудит квартир, коттеджей, многоквартирных домов, промышленых
+            помещений, офис, магазинов, электрических установок, поиск скрытых комуникация и протечек Вставка – фото проведения теплоаудита Энергоаудит Энергоаудит – комплексное энергетическое обследование объекта с целью выявления его технического состояния
+            и эффективности производства и использования энергии, разработки плана энергосберегающих мероприятий. Мы деалем энергоаудит здания, коттеджей, ОСМД, ресторанов, предприятий, заводов, ограждающих конструкций, инженерных систем, систем учетов,
+            изготовливаем энергопаспорт зданий и энергетический сертификат Вставка фото проведения энергоаудита
+
+        </div>
+        <div class="energy">
+            Энергоконсалтинг Разработка комплекса мероприятий по снижению энергопотребления Отопление без газа / Автономное теплоснабжение: (разработка общей концепции и задания на проектирование) Измерения и испытания, освидетельство­вание, экспертное обследование,
+            проводит тепловизионный контроль и периодическую проверку заземления по графику испытаний и проверок Экспертиза импортного оборудования на соответствие нормативно-правовым актам по охране труда, которые действуют в Украине. Прайс-лист (ссылка)
+
+        </div>
+    </div>
+
+
+
+
+    <div class="container" id="base">
+        <h3>Приборная база</h3>
+        <div class="item1">
+            <div class="row">
+                <div class="col-sm-12 prilad-name">
+                    <h4>Тепловизор Ti25 Fluke</h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 spoiler">
+                    <details>
+                        <summary>О приборе</summary>
+                        <div class="about">
+                            В настоящее время существует широкий выбор приборов для термографического контроля. Наши специалисты в своей работе используют только современное профессиональное оборудование от компаний-производителей с мировым именем. Это позволяет проводить работы
+                            и получать качественные результаты на высоком профессиональном уровне. Программное обеспечение позволяет не только обрабатывать полученные термограммы, но и анализировать, автоматически фиксируя отклонения температуры на аномальных
+                            участках.</div>
+                    </details>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6"><img src="http://www.astena.ru/pribors5/fluke-ti25.jpg" alt="" class="prila"></div>
+                <div class="col-sm-6">
+                    <ul>
+                        <li>Диапазон температурных измерений: От –20 °C до +350 °C</li>
+                        <li>Погрешность: ± 2 °C</li>
+                        <li>Поддержка технологии IR-Fusion®</li>
+                        <li>Отличная тепловая чувствительность (NETD) позволяет выявлять даже небольшие разности температур, которые могут указать на возможные энергопотери.</li>
+                        <li>Чистые резкие изображения позволяют быстрее обнаружить проблемные участки.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="item1">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h4>Толщиномер TT100</h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 spoiler">
+                    <details>
+                        <summary>О приборе</summary>
+                        <div class="about">
+                            Толщиномер ТТ100 – ультразвуковой толщиномер, предназначеный для измерения толщины любого однородного материала (металла, пластика, стекла, керамики и др.) при одностороннем доступе в диапазоне от 1,2 до 225 мм. Позволяет с высокой точностью находить
+                            места с уменьшенной в следствие долгой эксплуатации толщиной материала или изоляции.
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <ul>
+                        <li>Диапазон измерений: 1,0 - 225 мм</li>
+                        <li>Погрешность: ± 0,1 мм</li>
+                        <li>Автоматическая компенсация нелинейности и компьютерная корректировка погреностей датчика во всем диапазоне измерений</li>
+                        <li>Контроль скорости звука</li>
+                        <li>3 режима измерений: обычный, дифференциальный (измерение отклонения от заданного размера), сканирование ("захват" минимального значения толщины при движении преобразователя по поверхности)</li>
+                    </ul>
+                </div>
+                <div class="col-sm-6"><img src="http://prometeyndt.ru/upload/filemanager/tt100.gif" alt="" class="prila"></div>
+            </div>
+        </div>
+        <hr>
+        <div class="item1">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h4>Термометр-гигрометр LA CROSSE WT138-W-BLI</h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 spoiler">
+                    <details>
+                        <summary>О приборе</summary>
+                        <div class="about">В период, когда работает центральное или печное отопление, воздух в помещениях сильно осушается, и влажность воздуха может падать до 20%. Помимо снижения энергоэффективности помещения, сухой воздух так же оказывает негативное влияние
+                            на общее самочувствие человека, появляется быстрая утомляемость, сонливость, обострение аллергии и заболеваний верхних дыхательных путей.  Данный прибор позволяет определить комплексный показатель, который измеряет соотношение
+                            температуры и влажности воздуха и отображает общий уровень комфорта в помещении.</div>
+                    </details>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6"><img src="https://in-green.com.ua/image/cache/products/104/56bf34790fa58-la-crosse-wt138-w-bli-500x500.jpg" alt="" class="prila"></div>
+                <div class="col-sm-6">
+                    <ul>
+                        <li>Диапазон температурных измерений: от 0°C до +50°C</li>
+                        <li>Погрешность: ± 0,1°C</li>
+                        <li>Диапазон измерений влажности: от 20 до 95% RH</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="item1">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h4>Цифровой люксметр TASI HS1010</h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 spoiler">
+                    <details>
+                        <summary>О приборе</summary>
+                        <div class="about">Цифровой люксметр HS1010 предназначен для измерения освещенности, создаваемой различными источниками, произвольно пространственно расположенными. Пробор состоит из фотоэлемента, который преобразует световую энергию в энергию электрического
+                            тока, и измеряет ее в люксах. В режиме записи прибор может сохранить до 50 измерений с указанным интервалом. Затем можно посмотреть максимальное и минимальное значение, а также все записанные данные.</div>
+                    </details>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <ul>
+                        <li>Диапазон измерений: от 1 до 200000 Lx</li>
+                        <li>Погрешность: ± 3%</li>
+                        <li>Функция выбора диапазона измерений</li>
+                        <li>Частота измерения: 2 раз</li>
+                    </ul>
+                </div>
+                <div class="col-sm-6"><img src="https://ae01.alicdn.com/kf/HTB1x.sGRVXXXXcyXpXXq6xXFXXXl/1pc-HS1010-font-b-Luxmeter-b-font-Light-Meter-Mayitr-Lux-FC-Meter-Luminometer-Photometer-Tester.jpg" alt="" class="prila"></div>
+            </div>
+        </div>
+        <hr>
+        <div class="item1">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h4>Бесконтактный цифровой пирометр - термометр GM-320</h4>
+                </div>
+            </div>
+            <!-- <div class="row">
+            <div class="col-sm-12 spoiler">
+                <details>
+                    <summary>О приборе</summary>
+                    <div class="about">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+                </details>
+            </div>
+        </div> -->
+            <div class="row">
+                <div class="col-sm-6"><img src="https://ae01.alicdn.com/kf/HTB11sLyIFXXXXX4apXXq6xXFXXXQ/1-GM320.jpg" alt="" class="prila"></div>
+                <div class="col-sm-6">
+                    <ul>
+                        <li>Диапазон температурных измерений: от -50°C до +330°C</li>
+                        <li>Погрешность: ± 1°C</li>
+                        <li>Время отклика: 500 мс</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="comments">
+        <h3>Отзовы</h3>
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+                <div class="item active">
+                    <!-- <img src="la.jpg" alt="Los Angeles"> -->
+                    <div class="comment">
+                        <h4>Name</h4>
+                        <p>Comment</p>
+                    </div>
+
+                </div>
+
+                <div class="item">
+                    <div class="comment">
+                        <h4>Name</h4>
+                        <p>Comment</p>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="comment">
+                        <h4>Name</h4>
+                        <p>Comment</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev" style="border-radius:20px;">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next" style="border-radius:20px;">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+    <span class="sr-only">Next</span>
+  </a>
+        </div>
+    </div>
+
+
+    <div class="container" id="contacts">
+        <!-- (div.row>(div.col-sm-6.cont>h4+ul>li*4+button.btn{Показать карту})*2)*3 -->
+        <h3>Контакты</h3>
+
+        <div class="row fixedheight">
+            <div class="col-sm-6 col-md-4 cont">
+                <h4>г. Днепр, пер. Джинчарадзе, 8, 49040</h4>
+                <ul>
+                    <li>+38 (044) 287-18-71</li>
+                    <li>+38 (0562) 36-87-04</li>
+                    <li>+38 (050) 460-00-44</li>
+                    <li>+38 (095) 420-07-04</li>
+                    <button class="btn btn-block" onclick="initMap(dnepr)">Показать на карте</button>
+                </ul>
+            </div>
+            <div class="col-sm-6 col-md-4 cont">
+                <h4>г.Киев,
+             ул. Льва Толстого 19/1, офис 1</h4>
+                <h4>01033</h4>
+                <ul>
+                    <li>+38 (044) 287-18-71</li>
+                    <li>+38 (044) 287-18-74</li>
+                    <li>+38 067 561-76-79</li>
+                    <button class="btn btn-block" onclick="initMap(kiev1)">Показать на карте</button>
+                </ul>
+            </div>
+
+            <div class="col-sm-6 col-md-4 cont">
+                <h4>79037, г.Львов, ул.Б.Хмельницкого 212, корпус 3, офис 307</h4>
+                <ul>
+                    <li>+38 067 670-19-54</li>
+                    <li>+38 050 430-28-56</li>
+                    <button class="btn btn-block" onclick="initMap(lviv)">Показать на карте</button>
+                </ul>
+            </div>
+            <div class="col-sm-6 col-md-4 cont">
+                <h4>53201, г.Никополь, пр.Трубников 91, офис 201, 203</h4>
+                <ul>
+                    <li>38 (0566) 63-98-62</li>
+                    <button class="btn btn-block" onclick="initMap(nicopol)">Показать на карте</button>
+                </ul>
+            </div>
+
+            <div class="col-sm-6 col-md-4 cont">
+                <h4>284014, г. Ивано-Франковск, ул. Макухи И., 41 А</h4>
+                <ul>
+                    <li>+38 0342 59-51-48</li>
+                    <li>+38 067 566-52-52</li>
+
+                    <button class="btn btn-block" onclick="initMap(ivf)">Показать на карте</button>
+                </ul>
+            </div>
+            <div class="col-sm-6 col-md-4 cont">
+                <h4>02093, г. Киев, ул. Бориспольская, 11-А</h4>
+                <ul>
+                    <li>38 (067) 578-16-78</li>
+
+                    <button class="btn btn-block" onclick="initMap(kiev2)">Показать на карте</button>
+                </ul>
+            </div>
+        </div>
+
+        <div id="map">
+        </div>
+    </div>
+
+    <script>
+        var map;
+        var marker;
+        var dnepr = {
+            lat: 48.409785,
+            lng: 35.025620,
+        };
+        var lviv = {
+            lat: 49.868308,
+            lng: 24.057635,
+        };
+        var ivf = {
+            lat: 48.905854,
+            lng: 24.721175
+        };
+        var kiev2 = {
+            lat: 50.427131,
+            lng: 30.678556
+        };
+        var kiev1 = {
+            lat: 50.440432,
+            lng: 30.508540
+        };
+        var nicopol = {
+            lat: 47.580357,
+            lng: 34.344111
+        };
+
+        function initMap(city = dnepr) {
+            map = new google.maps.Map(document.getElementById('map'), {
+                center: city,
+                zoom: 16,
+            });
+            var marker = new google.maps.Marker({
+                position: city,
+                map: map
+            });
+        };
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASdqwQMJljaG8hmb97eWLdDaitzqdcjNU&callback=initMap" async defer></script>
+    <script>
+        $(document).ready(function() {
+            $('body').scrollspy({
+                target: ".navbar",
+                offset: 120
+            });
+            $(".navbar li a").on('click', function(event) {
+                if (this.hash !== "") {
+                    event.preventDefault();
+                    var hash = this.hash;
+
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top - 120
+                    }, 1000, function() {
+                        window.location.hash = hash;
+                    });
+                }
+            });
+        });
+        $(document).ready(function() {
+            $(".cont button").click(function() {
+                $('html, body').animate({
+                    scrollTop: $("#map").offset().top
+                }, 1000);
+            });
+        });
+    </script>
+
+</body>
+
+</html>
