@@ -91,6 +91,9 @@ color: var(--color1);
     color: black;
 }
 
+.top-icons {
+    min-height: 212px;
+}
 .nav-row {
     border: none;
 }
