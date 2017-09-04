@@ -15,7 +15,32 @@ body {
     font-family: Verdana, Arial, Helvetica, sans-serif;
     font-size: 140%;
     position: relative;
-    line-height: 1.6;
+    line-height: 1.7;
+}
+.icon {
+    /*margin: auto;*/
+    width: 120px;
+    height: 120px;
+    display: block;
+    margin: auto;
+
+    padding: 10px;
+    padding-top: 25px;
+    border-radius: 60px;
+    background-color: var(--nav-li-active);
+}
+.icon img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    vertical-align: middle;
+}
+.advantages {
+    padding-top: 20px;
+}
+.adv {
+    min-height: 228px;
+    padding: 20px;
 }
 
 .brand-name {
@@ -24,6 +49,9 @@ body {
     font-size: 120%;
     font-family: Verdana, Arial, Helvetica, sans-serif;
     color: var(--color1);
+}
+.serv p {
+    text-align: left;
 }
 
 
@@ -94,6 +122,10 @@ color: var(--color1);
 .top-icons {
     min-height: 212px;
 }
+/*.icons {
+    display: table;
+    max-width: 345px;
+}*/
 .nav-row {
     border: none;
 }
@@ -225,20 +257,46 @@ hr {
 .cont {
     text-align: center;
     padding: 15px;
-    min-height: 228px;
+    min-height: 210px;
 }
 
-.cont ul {
+@media (max-width: 992px) {
+    .cont1 {
+        min-height: 160px;
+        text-align: center;
+        padding: 15px;
+    }
+}
+
+@media (min-width: 992px) {
+    .cont1 {
+        text-align: center;
+        padding: 15px;
+        min-height: 210px;
+    }
+
+}
+/*@@media (max-width: 768) {
+    .icon {
+        margin: auto;
+        width: 90;
+        padding: 10px;
+        border-radius: 30px;
+        background-color: var(--nav-li-active);
+    }
+}*/
+
+.cont2 {
+    min-height: 160px;
+    text-align: center;
+    padding: 15px;
+}
+.cont ul, .cont1 ul, .cont2 ul, .cont3 ul {
     list-style-type: none;
 }
 
-.cont button {
-    position: absolute;
-    bottom: 0;
-    width: 72%;
-}
 
-.cont button:hover {
+.cont button:hover, .cont2 button:hover, .cont1 button:hover, .cont3 button:hover {
     background-color: var(--nav-li-active);
 }
 
