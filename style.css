@@ -3,7 +3,7 @@
     --color2: #e7ffed;
     --nav_color: rgb(255, 255, 255);
     --grey: rgb(228, 228, 228);
-    --nav-li-active: rgb(100, 233, 109);
+    --nav-li-active: rgb(37, 185, 118);
     --fullwidth: 100%;
     --trasparent-grey: rgba(10, 10, 10, 0.55);
     --logo: http: //svgshare.com/i/2qx.svg;
@@ -111,7 +111,11 @@ color: var(--color1);
 .nav>li.active {
     text-decoration: none;
     background-color: var(--nav-li-active);
+    color: white;
     /*border: 1px solid rgb(190, 190, 190);*/
+}
+.nav>li.active a {
+    color: white;
 }
 .brand a {
     height: 50px;
@@ -120,7 +124,7 @@ color: var(--color1);
 }
 
 .top-icons {
-    min-height: 212px;
+    min-height: 269 px;
 }
 /*.icons {
     display: table;
@@ -133,8 +137,10 @@ color: var(--color1);
 .icons {
     text-align: center;
     font-size: 110%;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 10px;
+    padding-bottom: 25px;
+    margin: auto;
+    max-width: 280px;
 }
 
 img {
@@ -339,6 +345,8 @@ hr {
 
 .point {
     padding-top: 10px;
+    margin: auto;
+    max-width: 400px;
 }
 
 #services {
