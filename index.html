@@ -13,20 +13,20 @@
 
 <body>
 
-    <nav class="navbar navbar-fixed-top" id="nav">
-        <div class="container-fluid custom-nav">
+    <nav class="navbar navbar-fixed-top" id="nav" style="background-color: white;">
+        <!-- <div class="container-fluid custom-nav"> -->
+        <a href="#home" class="navbar-left hidden-xs" id="brand-image"><img src="http://svgshare.com/i/2qx.svg" class="brand-image"></a>
             <div class="navbar-header">
                 <!-- <h4> ООО “Лаборатория неразрушающего контроля и технической диагностики”</h4> -->
-
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="#home" class="brand">ООО “Лаборатория неразрушающего контроля и технической диагностики”</a>
-
+                <a href="#home" class="brand" >ООО “Лаборатория неразрушающего контроля и технической диагностики”</a>
+                    <!-- style="color: black; font-size: 20px;" -->
             </div>
-            <div class="collapse navbar-collapse" id="myNavbar">
+            <div class="collapse navbar-collapse navbar-left" id="myNavbar">
                 <ul class="nav navbar-nav ul-navbar nav-a">
                     <li><a href="#company">О КОМПАНИИ</a></li>
                     <li><a href="#services">УСЛУГИ</a></li>
@@ -35,7 +35,7 @@
                     <li><a href="#contacts">КОНТАКТЫ</a></li>
                 </ul>
             </div>
-        </div>
+        <!-- </div> -->
     </nav>
 
     <div class="header-site">
@@ -469,7 +469,9 @@
         <div class="item1">
             <div class="row">
                 <div class="col-sm-12 prilad-name">
-                    <h4>Цифровой люксметр TASI HS1010</h4>
+                    <h4 class="hidden-xs">Цифровой люксметр TASI HS1010</h4>
+                    <h4 class="visible-xs">Цифровой люксметр</h4>
+                    <h4 class="visible-xs">TASI HS1010</h4>
                 </div>
             </div>
             <div class="row">
@@ -673,15 +675,15 @@
         $(document).ready(function() {
             $('body').scrollspy({
                 target: ".navbar",
-                offset: 70
+                offset: 55
             });
-            $(".custom-nav a").on('click', function(event) {
+            $(".navbar a").on('click', function(event) {
                 if (this.hash !== "") {
                     event.preventDefault();
                     var hash = this.hash;
 
                     $('html, body').animate({
-                        scrollTop: $(hash).offset().top - 70
+                        scrollTop: $(hash).offset().top - 55
                     }, 1000, function() {
                         window.location.hash = hash;
                     });

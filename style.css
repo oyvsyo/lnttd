@@ -9,13 +9,15 @@
     --logo: http: //svgshare.com/i/2qx.svg;
     --logo2: http: //svgshare.com/i/2rz.svg;
     --serv-heigth: 215px;
+    --big-heigth: 140px;
+    --small-heigth: 80px;
 }
 
 body {
     font-family: Verdana, Arial, Helvetica, sans-serif;
     font-size: 140%;
     position: relative;
-    line-height: 1.7;
+    line-height: 1.6;
 }
 .icon {
     /*margin: auto;*/
@@ -82,6 +84,12 @@ list-style-type: none;
 border: 1px solid #555;
 color: var(--color1);
 }*/
+.brand-image {
+    width: 36px;
+    margin-right:20px;
+    margin-left: 20px;
+    margin-top: 10px;
+}
 
 .b-top {
     margin-top: 100px;
@@ -117,10 +125,15 @@ color: var(--color1);
 .nav>li.active a {
     color: white;
 }
-.brand a {
+.brand {
     height: 50px;
     padding: 10px;
     color: black;
+    font-size: 20px;
+}
+.brand:hover , .brand:active, .brand:visited {
+    color: black;
+    text-decoration: none;
 }
 
 .top-icons {
@@ -281,6 +294,12 @@ hr {
         min-height: 210px;
     }
 
+@media (max-width: 904px) {
+    #brand-image {
+        display: none;
+    }
+}
+
 }
 /*@@media (max-width: 768) {
     .icon {
@@ -344,7 +363,7 @@ hr {
 }
 
 .point {
-    padding-top: 10px;
+    /*padding-top: 0px;*/
     margin: auto;
     max-width: 400px;
 }
@@ -378,12 +397,12 @@ hr {
     z-index: 1000;
     position: absolute;
     height: 2px;
-    border: 2px var(--nav-li-active);
+    /*border: 1px solid var(--nav-li-active);*/
     behavior: url(PIE.htc);
     background: var(--nav-li-active);
     width: 145%;
     left: 25%;
-    top: 191px;
+    top: 193px;
 }
 
 .line-bellow-md {
@@ -391,9 +410,9 @@ hr {
     z-index: 1000;
     position: absolute;
     height: 2px;
-    border: 2px var(--nav-li-active);
+    border: 0;
     behavior: url(PIE.htc);
-    background: var(--nav-li-active);
+    background-color: var(--nav-li-active);
     width: 245%;
     left: -75%;
     top: 176px;
@@ -403,8 +422,8 @@ hr {
     float: left;
     z-index: 1000;
     position: absolute;
-    height: 2px;
-    border: 2px var(--nav-li-active);
+    height: 1px;
+    border: 1px solid var(--nav-li-active);
     behavior: url(PIE.htc);
     background: var(--nav-li-active);
     width: 55%;
@@ -419,10 +438,9 @@ hr {
     bottom: 0;
     top: 55px;
     left: 70%;
-    height: 138px;
+    height: var(--big-heigth);
     width: 30%;
     border-top: 2px solid var(--nav-li-active);
-    /*background: transparent;*/
     border-bottom: 2px solid var(--nav-li-active);
     border-right: 2px solid var(--nav-li-active);
     border-top-right-radius: 30px;
@@ -434,9 +452,9 @@ hr {
     z-index: 1000;
     position: absolute;
     bottom: 0;
-    top: -24px;
+    top: -23px;
     left: 0%;
-    height: 81px;
+    height: var(--small-heigth);
     width: 25%;
     border-top: 2px solid var(--nav-li-active);
     /*background: transparent;*/
