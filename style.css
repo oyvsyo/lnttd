@@ -10,7 +10,7 @@
     --logo2: http: //svgshare.com/i/2rz.svg;
     --serv-heigth: 215px;
     --big-heigth: 140px;
-    --small-heigth: 80px;
+    --small-heigth: 79px;
 }
 
 body {
@@ -452,7 +452,7 @@ hr {
     z-index: 1000;
     position: absolute;
     bottom: 0;
-    top: -23px;
+    top: -22px;
     left: 0%;
     height: var(--small-heigth);
     width: 25%;
