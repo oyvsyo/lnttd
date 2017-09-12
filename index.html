@@ -25,7 +25,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#home">
+                <a class="navbar-brand navigation " href="#home" style="padding-top:5px;">
                     <img style="width: 144px;" src="http://svgshare.com/i/2yo.svg" alt="Лаборатория неразрушающего контроля">
                 </a>
                 <a class="navbar-brand visible-xs visible-sm call-icon" href="#">
@@ -243,14 +243,14 @@
             <div class="col-sm-4 zayavka" id="call">
 
                 <h4>Оставить заявку</h4>
-                <form action="/action_page.php">
+                <form action="/sms" method="post">
                     <div class="form-group">
                         <label for="email">Електронная пошта:</label>
                         <input type="email" class="form-control" id="email" placeholder="" name="email">
                     </div>
                     <div class="form-group">
                         <label for="pwd">Номер телефона:</label>
-                        <input type="password" class="form-control" id="pwd" placeholder="" name="pwd">
+                        <input type="phone" class="form-control" id="pwd" placeholder="" name="pwd">
                     </div>
                     <button type="submit" class="btn btn-md">Заказать</button>
                 </form>
@@ -549,7 +549,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-6"><img src="https://in-green.com.ua/image/cache/products/104/56bf34790fa58-la-crosse-wt138-w-bli-500x500.jpg" alt="" class="prila"></div>
+                <div class="col-sm-6"><img src="https://i.imgur.com/JvBYwEG.jpg" alt="" class="prila"></div>
                 <div class="col-sm-6">
                     <ul>
                         <li>Диапазон температурных измерений: от 0°C до +50°C</li>
@@ -586,7 +586,7 @@
                         <li>Частота измерения: 2 раз</li>
                     </ul>
                 </div>
-                <div class="col-sm-6"><img src="https://ae01.alicdn.com/kf/HTB1x.sGRVXXXXcyXpXXq6xXFXXXl/1pc-HS1010-font-b-Luxmeter-b-font-Light-Meter-Mayitr-Lux-FC-Meter-Luminometer-Photometer-Tester.jpg" alt="" class="prila"></div>
+                <div class="col-sm-6"><img src="https://i.imgur.com/mTrlXZx.jpg" alt="" class="prila"></div>
             </div>
         </div>
         <hr>
@@ -600,7 +600,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-6"><img src="https://ae01.alicdn.com/kf/HTB11sLyIFXXXXX4apXXq6xXFXXXQ/1-GM320.jpg" alt="" class="prila"></div>
+                <div class="col-sm-6"><img src="https://i.imgur.com/XqugtVc.jpg" alt="" class="prila"></div>
                 <div class="col-sm-6">
                     <ul>
                         <li>Диапазон температурных измерений: от -50°C до +330°C</li>
@@ -778,9 +778,11 @@
                     }, 1000, function() {
                         window.location.hash = hash;
                     });
-                    setTimeout(function() {
-                        $('.navbar-toggle').click();
-                    }, 500);
+                    if ($( document ).width() <= 992) {
+                        setTimeout(function() {
+                            $('.navbar-toggle').click();
+                        }, 500);
+                    };
                 };
             });
 
