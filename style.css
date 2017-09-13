@@ -333,20 +333,6 @@ hr {
 }
 
 
-/*@media (max-width: 904px) {
-                   #brand-image {
-                       display: none;
-                   }
-               }*/
-
-
-/*@media (max-width:950px) {
-                   #phone {
-                       display: none;
-                   }
-               }*/
-
-
 .serv p {
     text-align: left;
 }
@@ -397,7 +383,7 @@ h5 {
 }
 
 .cont2 {
-    min-height: 160px;
+    min-height: 180px;
     text-align: center;
     padding: 15px;
 }

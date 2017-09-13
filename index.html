@@ -2,12 +2,17 @@
 <html lang="en">
 
 <head>
-    <title>lnttd</title>
+    <title>Энергоаудит|Теплоаудит|Энергоконсалтинг</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <meta name="keywords" content="энергоаудит, энергоэффективность, теплоаудит, тепловизионное обследование, теплопотери, энергопотери, энергосбережение,  энергоконсалтинг, тепловизор, энергопаспорт, энергетический паспорт, энергетический сертификат">
+    <meta name="description" content="Энергоаудит|Теплоаудит|Энергоконсалтинг - помощь в оптимизации энергопотребления, поиск и устранение энергопотерь, разработка мер для экономии до 70% на коммунальных платежах. Оформление и выдача энергетических паспортов.">
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/jquery.color-animation/1/mainfile"></script>
@@ -51,6 +56,7 @@
         <div class="container" id="home">
             <div class="jumbotron slogan">
                 <h4>ООО «Лаборатория неразрушающего контроля и технической диагностики» - </h4>
+
                 <h4 style="font-size: 130%;">Ваша гарантия энергоэффективности</h4>
                 <!-- <h3>Ваша гарантия энергоэффективности</h3> -->
             </div>
@@ -229,23 +235,34 @@
                 </details>
             </div>
 
+
+
+
+
+
+
             <div class="col-sm-4 zayavka" id="call">
 
                 <h4>Оставить заявку</h4>
-                <form action="/sms" method="post">
+                <form  method="post" id="smsForm" action="/sms">
                     <div class="form-group">
                         <label for="email">Електронная пошта:</label>
                         <input type="email" class="form-control" id="email" placeholder="" name="email">
                     </div>
                     <div class="form-group">
                         <label for="pwd">Номер телефона:</label>
-                        <input type="phone" class="form-control" id="pwd" placeholder="" name="pwd">
+                        <input type="phone" class="form-control" id="phone" placeholder="" name="pwd">
                     </div>
-                    <button type="submit" class="btn btn-md">Заказать</button>
+                    <button type="submit"  class="btn btn-md">Заказать</button>
                 </form>
 
             </div>
         </div>
+
+
+
+
+
 
         <div class="row prices panel panel-default">
             <h4>Прайс листы:</h4>
@@ -613,6 +630,27 @@
                         <span> <h4>Роман Волощук, Киев</h4> Стояла типичная задача – уменьшить цифры в коммунальных платежах за дом. Специалисты компании предоставили исчерпывающую консультацию, провели энергоаудит, разработали план для снижения энергопотребления, предоставили расчеты стоимости и прогноз окупаемости затрат. Как результат – хоть и молодые ребята, но качественная работа, наглядные результаты, ощутимая экономия. Рекомендую!</span>
                     </div>
                 </div>
+                <div class="item">
+                    <div class="comment">
+                        <span> <h4>Максим Швець, Івано-Франківськ </h4>
+Я замовляв послугу тепловізійної зйомки до і після проведення робіт по утепленню фасаду будинку, спеціалісти компанії зробили все якісно, в термін і допомогли мені заощадити значні кошти</span>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="comment">
+                        <span> <h4>Марина Коновалова, Запорожье </h4>
+Была задача провести энергоаудит ОСМД, компания предоставила специалистов и задача была решена качественно и в кратчайшие сроки, также получили чёткие указание по повышению энергоэффективности, методах, стоимости и сроках. Рекомендую</span>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="comment">
+                        <span> <h4>Константин Переверзев, Одесса</h4>
+                            Строим гостиничный комплекс, решили заказать услугу энергоконсалтинга. Изначально хотели сделать новый комплекс максимально энергоэффективным и в будущем сократить счета по оплате коммуналки. Компания разработала для нас проект, который поможет экономить до 50% на коммуналке, специалисты доступно объяснили все малейшие детали. Я остался очень довольнен, рекомендую.
+                        </span>
+                    </div>
+                </div>
             </div>
 
             <!-- Left and right controls -->
@@ -733,6 +771,27 @@
         };
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASdqwQMJljaG8hmb97eWLdDaitzqdcjNU&callback=initMap" async defer></script>
+    <!-- <script type="text/javascript">
+    function sms() {
+            $.ajax({
+                type: 'POST',
+                url: 'sms/',
+                data: 'lalka',
+                // data: {
+                //     email: $('input#email').val(),
+                //     phone: $('input#phone').val(),
+                // },
+                // if sucess post request
+                success : function(json) {
+                    $(".zayavka").append('<p>Ваша заявка отправлена</p>');
+                },
+                // if unsucess post request
+                error : function(xhr,errmsg,err) {
+                    console.log(xhr.status + ": " + xhr.responseText);
+                }
+            });
+        };
+    </script> -->
     <script>
         $(document).ready(function() {
             $('body').scrollspy({
