@@ -11,7 +11,10 @@
     <meta name="description" content="Энергоаудит|Теплоаудит|Энергоконсалтинг - помощь в оптимизации энергопотребления, поиск и устранение энергопотерь, разработка мер для экономии до 70% на коммунальных платежах. Оформление и выдача энергетических паспортов.">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="https://cdn.rawgit.com/oyvsyo/lnttd/master/style.css"> -->
+    <!-- <link rel="stylesheet" href="https://rawgit.com/oyvsyo/lnttd/master/style.css"> -->
+    <link rel="stylesheet" href="https://energolab.com.ua/style.css">
+    <!-- <link rel="stylesheet" href="/style.css"> -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -244,31 +247,31 @@
             <div class="col-sm-4 zayavka" id="call">
 
                 <h4>Оставить заявку</h4>
-                <form  method="post" id="smsForm" action="/sms">
+                <form  id="smsForm">
+                    <div class="form-group">
+                        <label for="name">Имя:</label>
+                        <input type="name" class="form-control" id="name" placeholder="" name="name">
+                    </div>
                     <div class="form-group">
                         <label for="email">Електронная пошта:</label>
                         <input type="email" class="form-control" id="email" placeholder="" name="email">
                     </div>
                     <div class="form-group">
-                        <label for="pwd">Номер телефона:</label>
-                        <input type="phone" class="form-control" id="phone" placeholder="" name="pwd">
+                        <label for="phone">Номер телефона:</label>
+                        <input type="phone" class="form-control" id="phone" placeholder="" name="phone">
                     </div>
-                    <button type="submit"  class="btn btn-md">Заказать</button>
+                    <button onclick="sms()"  class="btn btn-md">Заказать</button>
                 </form>
 
             </div>
         </div>
 
 
-
-
-
-
         <div class="row prices panel panel-default">
-            <h4>Прайс листы:</h4>
-            <div class="col-sm-4"><button class="btn">Физические лица</button></div>
-            <div class="col-sm-4"><button class="btn">Юридические лица</button></div>
-            <div class="col-sm-4"><button class="btn">Коммунальные предприятия</button></div>
+            <h4>Полный список услуг:</h4>
+            <div class="col-sm-4"><a href="http://energolab.com.ua/serv_list_phys.pdf"><button class="btn">Физические лица</button></div></a>
+            <div class="col-sm-4"><a href="http://energolab.com.ua/serv_list_u.pdf"></a><button class="btn">Юридические лица</button></div></a>
+            <div class="col-sm-4"><a href="http://energolab.com.ua/serv_list_com.pdf"></a><button class="btn">Коммунальные предприятия</button></div></a>
         </div>
 
 
@@ -671,7 +674,7 @@
         <h3>Контакты</h3>
 
         <div class="row ">
-            <div class="col-sm-6 col-md-4 cont">
+            <!-- <div class="col-sm-6 col-md-4 cont">
                 <h4>г. Днепр, пер. Джинчарадзе, 8, 49040</h4>
                 <ul>
                     <li>+38 (044) 287-18-71</li>
@@ -680,8 +683,8 @@
                     <li>+38 (095) 420-07-04</li>
                 </ul>
                 <button class="btn btn-block" style="position: absolute; bottom:0; width: 60%; left:20%" onclick="initMap(dnepr)">Показать на карте</button>
-            </div>
-            <div class="col-sm-6 col-md-4 cont">
+            </div> -->
+            <div class="col-sm-6 col-md-6 cont">
                 <h4>г.Киев,
              ул. Льва Толстого 19/1, офис 1, 01033</h4>
                 <ul>
@@ -692,24 +695,24 @@
                 <button class="btn btn-block" style="position: absolute; bottom:0; width: 60%; left:20%" onclick="initMap(kiev1)">Показать на карте</button>
             </div>
 
-            <div class="col-sm-6 col-md-4 cont1">
+            <!-- <div class="col-sm-6 col-md-4 cont1">
                 <h4>г.Львов, ул.Б.Хмельницкого 212, корпус 3, офис 307, 79037</h4>
                 <ul>
                     <li>+38 067 670-19-54</li>
                     <li>+38 050 430-28-56</li>
                 </ul>
                 <button class="btn btn-block" style="position: absolute; bottom:0; width: 60%; left:20%" onclick="initMap(lviv)">Показать на карте</button>
-            </div>
-            <div class="col-sm-6 col-md-4 cont2">
+            </div> -->
+            <!-- <div class="col-sm-6 col-md-4 cont2">
                 <h4>г.Никополь, пр.Трубников 91, офис 201, 203, 53201</h4>
                 <ul>
                     <li>38 (0566) 63-98-62</li>
                 </ul>
                 <button class="btn btn-block" style="position: absolute; bottom:0; width: 60%; left:20%" onclick="initMap(nicopol)">Показать на карте</button>
 
-            </div>
+            </div> -->
 
-            <div class="col-sm-6 col-md-4 cont2">
+            <!-- <div class="col-sm-6 col-md-4 cont2">
                 <h4>г. Ивано-Франковск, ул. Макухи И., 41 А, 284014</h4>
                 <ul>
                     <li>+38 0342 59-51-48</li>
@@ -717,11 +720,11 @@
                 </ul>
                 <button class="btn btn-block" style="position: absolute; bottom:0; width: 60%; left:20%" onclick="initMap(ivf)">Показать на карте</button>
 
-            </div>
-            <div class="col-sm-6 col-md-4 cont2">
+            </div> -->
+            <div class="col-sm-6 col-md-6 cont">
                 <h4>г. Киев, ул. Бориспольская, 11-А, 02093</h4>
                 <ul>
-                    <li>38 (067) 578-16-78</li>
+                    <li>+38 (067) 578-16-78</li>
                 </ul>
                 <button class="btn" style="position: absolute; bottom:0; width: 60%; left:20%" onclick="initMap(kiev2)">Показать на карте</button>
             </div>
@@ -771,19 +774,22 @@
         };
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASdqwQMJljaG8hmb97eWLdDaitzqdcjNU&callback=initMap" async defer></script>
-    <!-- <script type="text/javascript">
+    <script type="text/javascript">
     function sms() {
             $.ajax({
                 type: 'POST',
                 url: 'sms/',
                 data: 'lalka',
-                // data: {
-                //     email: $('input#email').val(),
-                //     phone: $('input#phone').val(),
-                // },
+                data: {
+                    name: $('input#name').val(),
+                    email: $('input#email').val(),
+                    phone: $('input#phone').val(),
+                },
                 // if sucess post request
                 success : function(json) {
                     $(".zayavka").append('<p>Ваша заявка отправлена</p>');
+                    // $(".zayavka").append('<p>Lalka</p>');
+
                 },
                 // if unsucess post request
                 error : function(xhr,errmsg,err) {
@@ -791,7 +797,7 @@
                 }
             });
         };
-    </script> -->
+    </script>
     <script>
         $(document).ready(function() {
             $('body').scrollspy({
