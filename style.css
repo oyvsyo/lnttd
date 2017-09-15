@@ -378,6 +378,13 @@ h5 {
     background-color: var(--nav-li-active);
     color: white;
 }
+
+.prices>a, .prices>a:active, .prices>a:focus, .prices>a:visited {
+    color: black;
+}
+.prices a:hover {
+    color: white;
+}
 .advantages {
     text-align: center;
 }
