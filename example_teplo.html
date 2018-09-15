@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-60184544-3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments)
+        };
+        gtag('js', new Date());
+        gtag('config', 'UA-60184544-3');
+    </script>
+    <title>Пример Теплоаудит</title>
+    <meta charset="utf-8">
+    <meta name="google-site-verification" content="enJjxWancqyqX6vmVHo3SxMuZz3TQbB0B8R6SQ1tnpo" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="keywords" content="энергоаудит, энергоэффективность, теплоаудит, тепловизионное обследование, теплопотери, энергопотери, энергосбережение,  энергоконсалтинг, тепловизор, энергопаспорт, энергетический паспорт, энергетический сертификат">
+    <meta name="description" content="Энергоаудит|Теплоаудит|Энергоконсалтинг - помощь в оптимизации энергопотребления, поиск и устранение энергопотерь, разработка мер для экономии до 70% на коммунальных платежах. Оформление и выдача энергетических паспортов.">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="https://energolab.com.ua/style.css"> -->
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="https://oyvsyo.github.io/lnttd/style.css"> -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-60184544-3"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.color-animation/1/mainfile"></script>
+    <script src="https://cdn.rawgit.com/leafo/sticky-kit/v1.1.2/jquery.sticky-kit.min.js"></script>
+    <script src="https://cdn.rawgit.com/inorganik/countUp.js/master/dist/countUp.min.js"></script>
+</head>
+
+<body>
+
+    <nav class="conteiner navbar navbar-fixed-top shadow-box" id="nav" style="background-color: white;">
+        <div class="lalka container">
+            <div class=" navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand navigation" href="#home" style="padding-top:0px;">
+                    <img style="width: 144px;" src="https://energolab.com.ua/new_logo.svg" alt="Лаборатория неразрушающего контроля">
+                </a>
+
+                <!-- <a class="navbar-brand visible-xs visible-sm call-icon" href="#">
+                    <img style="width: 55px; margin: auto;" src="http://svgshare.com/i/2yh.svg" alt="Оставить заявку">
+                </a> -->
+            </div>
+            <div class="language visible-md visible-lg">
+                <button><a href="">Укр</a></button>
+                <button><a href="">Рус</a></button>
+                <button><a href="">Eng</a></button>
+            </div>
+
+            <div class="collapse navbar-collapse navbar-right" id="myNavbar">
+                <ul class="nav navbar-nav ul-navbar nav-a">
+                    <li><a id="nav-company" class="navigation" href="#company">О КОМПАНИИ</a></li>
+                    <li><a class="navigation" href="#services">УСЛУГИ</a></li>
+
+                    <li><a class="navigation" href="#comments">ОТЗЫВЫ</a></li>
+                    <li><a class="navigation" href="#contacts">КОНТАКТЫ</a></li>
+
+                    <li class="dropdown visible-sm visible-xs" id="drop-li">
+                        <a class="dropdown-toggle" data-toggle="dropdown" id="drop" href="#">ДРУГОЕ
+                        <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Приборная База</a></li>
+                            <li><a href="#">Разрешительные Документы</a></li>
+                            <li><a href="#">Пример Енергоаудит</a></li>
+                            <li><a href="#">Пример Теплоаудит</a></li>
+                            <li><a href="#">Пример Паспорта</a></li>
+                            <li><a href="#">Пример Сертифрката</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown"><a class="navigation dropbtn visible-lg visible-md">
+                        ДРУГОЕ</a>
+                        <div class="dropdown-content dropdown-menu-right">
+                            <a href="#">Приборная База</a>
+                            <a href="#">Разрешительные Документы</a>
+                            <a href="#">Пример Енергоаудит</a>
+                            <a href="#">Пример Теплоаудит</a>
+                            <a href="#">Пример Паспорта</a>
+                            <a href="#">Пример Сертифрката</a>
+                        </div>
+                    </li>
+
+                    <li id="phone"><a href="#services" class="phone-icon navigation hidden-xs " style="padding:0; margin-left:10px; background-color:white"><button class="btn btn-default btn-phone">Оставить заявку</button></a></li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+    <main>
+        <div class="container section" id="examples">
+            <h3>Теплоаудит</h3>
+            <div class="row" style="padding-top: 30px;">
+                <div class="col-sm-4 col-md-4 top-icons">
+                    <div class="icon">
+                        <img src="https://energolab.com.ua/ex_teplo_1.svg" alt="5 минут">
+                    </div>
+                    <div class="icons">
+                        <p>Наглядная визуализация состояния энергоэффективности здания, выявление 100% теплопотерь</p>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-md-4 top-icons" style="min-height:269px;">
+                    <div class="icon">
+                        <img src="https://energolab.com.ua/ex_teplo_2.svg" alt="7 дней">
+                    </div>
+                    <div class="icons">
+                        <p>Разработка индивидуальной "дорожной карты" по устранению найденных недостатков</p>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-md-4 top-icons">
+                    <div class="icon">
+                        <img src="https://energolab.com.ua/ex_teplo_3.svg" alt="70%">
+                    </div>
+                    <div class="icons">
+                        <p>Помощь в создании комфортных показателей микроклимата и уменьшении теплопотерь</p>
+                    </div>
+                </div>
+            </div>
+            <!-- <hr> -->
+            <div id="services-row" class="row">
+                <div class="col-md-9 col-sm-9 examples-text">
+                    <p>Тепловизионный контроль может идентифицировать и фиксировать проникновение влаги и появление конденсата, инфильтрацию воздуха и потери тепловой энергии, "мосты холода", неисправности отопительных и водопроводных систем.
+                    </p>С точки зрения потерь энергии тепловизор позволяет обнаруживать:
+                    <p>
+                        <ul>
+                            <li>потери тепла и проникновение воздуха через стены, потолки, полы, окна и двери;</li>
+                            <li>поврежденные и/или неисправные системы отопления;</li>
+                            <li>строительные и структурные дефекты, которые могут привести к потере энергии;</li>
+                        </ul>
+                    </p>
+                    Что касается контроля проникновения влаги, с помощью теплоаудита можно найти:
+                    <p>
+                        <ul>
+                            <li>утечки в системе водопровода;</li>
+                            <li>неявные утечки и негерметичности в крыше, прежде чем они нанесут серьезный ущерб;</li>
+                            <li>отсутствие, повреждение и/или изменение теплоизоляционных характеристик утеплителя;</li>
+                            <li>проникновение воды и влаги в фундамент и оболочку здания, что может привести к структурным повреждениям и появлению плесени.</li>
+                        </ul>
+                    </p>
+                    <p>При сканировании поверхностей помещения с помощью тепловизора эксперт теплоаудита быстро определяет места изменения температуры, масштаб и источники проблем. </p>
+                    <p>В зависимости от установленных исходных данных и местоположения найденных температурных отклонений, результаты теплоаудита могут либо предупредить о необходимости критического ремонта (например, утечка теплоносителя или протекающая
+                        крыша), либо указать на слабые места строительной конструкции, которые нужно держать под контролем (неравномерное утепление, изменения теплоизолирующих свойств утеплителя, негерметичность монтажного шва окон). </p>
+                    <p>Теплоаудиторы компании как можно точнее и подробнее интерпретируют и комментируют результаты тепловизионного обследования, так что заказчику предоставляется вся необходимая информация для устранения возможных недостатков и дефектов
+                        строительной конструкции.</p>
+                    <p>Так же, для клиента разрабатывается индивидуальная "дорожная карта" устранения тепловых потерь и достижения максимального показателя энергоэффективности и энергосбережения.</p>
+                    <p>Предоставляемый по результатам обследования отчет оформляется в соответствии с пожеланиями клиента и является максимально удобным для анализа и дальнейшего использования. Специалист предоставляет стандартные цифровые изображения рядом
+                        с термограммами - это дает более точное представление о расположении найденных во время теплоаудита дефектов, что необходимо для правильной реализации энергоэффективных мероприятий, разработанных после проведения обследования.</p>
+                    <p>Такой подход позволяет нашим клиентам сохранить ценное время и ресурсы - провести ремонт только тех частей здания, которые нуждаются в этом, гораздо экономнее и эффективнее, чем выполнять ремонт независимо от фактической необходимости.</p>
+                    Компания ООО "Лаборатория неразрушающего контроля и технической диагностики" обладает всем необходимым для предоставления качественных услуг по теплоаудиту:
+                    <ul>
+                        <li>Тепловизор Fluke Ti 25 с высокой скоростью сканирования, четким качеством изображений, долгим временем автономной работы;</li>
+                        <li>Программное обеспечение для анализа и расшифровки термограмм;</li>
+                        <li>Обученные и квалифицированные сотрудники.</li>
+                    </ul>
+
+                </div>
+
+                <div class="col-sm-3 col-sm-8 zayavka sticky-form">
+                    <div id="call">
+                        <h4>Оставить заявку</h4>
+                        <form id="smsForm">
+                            <div class="form-group">
+                                <label for="name">Имя:</label>
+                                <input type="name" class="form-control" id="name" placeholder="" name="name">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Номер телефона:</label>
+                                <input type="phone" class="form-control" id="phone" placeholder="" name="phone">
+                            </div>
+                            <button type="button" onclick="sms()" class="btn btn-md shadow-box">Заказать</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <h3>Пример</h3>
+            <div class="container example-wrapper">
+            <div class="row examples-box row row-eq-height">
+                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 examples-image-box">
+                    <img class="img-responsive" src="https://energolab.com.ua/teplo_example1.png" alt="">
+                </div>
+                <!-- <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 examples-info-box"> -->
+
+                <!-- ul.charul>(li.charli>div.row>(div.col-md-4.col-xs-4.col-sm-4.charicon>img[src='http://svgshare.com/i/2rQ.svg']+div.col-md-8.col-xs-8.col-sm-8.charchar>(h5{Characteristic}+p{lalka}>span{12345})))*6 -->
+
+                <!-- </div> -->
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 examples-address-list" style="padding: 0px;">
+                    <ul class="hidden-xs">
+                        <li value="1" class="example-active">
+                            <div>
+
+                                <p>ЖК 'Новопечерські Липки'</p>
+                            </div>
+                        </li>
+                        <li value="2">
+                            <div>
+
+                                <p>Оболонский проспект, 12</p>
+                            </div>
+                        </li>
+                        <li value="3">
+                            <div>
+
+                                <p>ул. Александра Копыленко, 4</p>
+                            </div>
+                        </li>
+                        <li value="4">
+                            <div>
+
+                                <p>ул. Межигорская, 28</p>
+                            </div>
+                        </li>
+                        <li value="5">
+                            <div>
+
+                                <p>ул. Чернобыльская, 14</p>
+                            </div>
+                        </li>
+                        <li value="6">
+                            <div>
+
+                                <p>с. Гатное</p>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <select name="" id="select" class="object-select visible-xs" onchange="object_selection()">
+                        <option value="1">ЖК 'Новопечерські Липки'</option>
+                        <option value="2">Оболонский проспект, 12</option>
+                        <option value="3">ул. Александра Копыленко, 4</option>
+                        <option value="4">ул. Межигорская, 28</option>
+                        <option value="5">ул. Чернобыльская, 14</option>
+                        <option value="6">с. Гатное</option>
+                    </select>
+                </div>
+            </div>
+            <!-- (div.row>(div.col-sm-4.col-md-4.col-lg-4>(div.char-icon>img[src='http://svgshare.com/i/2rQ.svg']+div.char-hold>(h5+p{Characteristic}>span{lalka})))*3)*2 -->
+            <!-- (div.row>(div.col-sm-4.col-md-4.col-lg-4>(div.char-icon>img[src='http://svgshare.com/i/2rQ.svg']+div.char-hold>(h5{Name of characteristic}+p{Characteristic}>span{lalka})))*3)*2 -->
+            <div class="row char-row">
+                <div class="col-sm-4 col-md-4 col-lg-4">
+
+                    <div class="char-icon"><img src="http://energolab.com.ua/ex1.svg" alt=""></div>
+                    <div class="char-hold">
+                        <h5>Измирений:</h5>
+                        <p><span id="1" class="number">172</span> м<sup>3</sup></p>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-md-4 col-lg-4">
+                    <div class="char-icon"><img src="http://energolab.com.ua/ex2.svg" alt=""></div>
+                    <div class="char-hold">
+                        <h5 style="margin-bottom: 0px;">Время аудита:</h5>
+                        <p style="margin-bottom:0px;"><span id="2" class="number">1.5</span> <span id="time-audit">часа</span> обследования
+                        </p>
+                        <p>
+                            <span id="3" class="number">2</span> <span id="time-audit2">дня</span> оформление результатов</p>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-md-4 col-lg-4">
+                    <div class="char-icon"><img src="http://energolab.com.ua/ex5.svg" alt=""></div>
+                    <div class="char-hold">
+                        <h5>Стоимость:</h5>
+                        <p><span id="5" class="number"> 2100</span> грн</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row char-row">
+                <div class="col-sm-4 col-md-4 col-lg-4">
+                    <div class="char-icon"><img src="http://energolab.com.ua/ex4.svg" alt=""></div>
+                    <div class="char-hold">
+                        <h5>Энергопотребление:</h5>
+                        <p><span id="4" class="number">155</span> Ват/год</p>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-md-4 col-lg-4">
+                    <div class="char-icon"><img style="fill: white;" src="http://energolab.com.ua/ex3.svg" alt=""></div>
+                    <div class="char-hold">
+                        <h5>Класс</h5>
+                        <h5 style="margin-top:-3px;">энергоэффективности:</h5>
+                        <p><span>Е</span></p>
+                    </div>
+                </div>
+
+                <div class="col-sm-4 col-md-4 col-lg-4">
+                    <div class="char-icon"><img src="http://energolab.com.ua/ex6.svg" alt=""></div>
+                    <div class="char-hold">
+                        <h5 style="margin-bottom: 3px; margin-top: 10px;">Окупаемость:</h5>
+                        <p style="margin-bottom: 3px;"><span id="6" class="number">3</span> <span id="time-occupy">года</span></p>
+                        <h5 style="margin-bottom: 3px; margin-top: 3px;">Економия:</h5>
+                        <p><span id="7" class="number">27</span> <span>%</span></p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        </div>
+
+
+        <div id="sidebar">
+            <a class="call-icon" href="#" id="call-sticky">
+                <img  class="transition shadow-box call-sticky" style="width: 65px;" src="https://energolab.com.ua/phone-icon.svg" alt="Оставить заявку"></a>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="page-footer font-small cyan darken-3">
+
+        <!-- Footer Elements -->
+        <div class="container">
+
+            <!-- Grid row-->
+            <div class="row">
+                <!-- Grid column -->
+                <div class="col-md-12 py-5">
+                    <div class="mb-10  social-icon-wrapper">
+
+                        <!-- Facebook -->
+                        <a class="fb-ic">
+              <i class="fa fa-facebook fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+            </a>
+                        <!-- Twitter -->
+                        <a class="tw-ic">
+              <i class="fa fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+            </a>
+                        <!-- Google +-->
+                        <a class="gplus-ic">
+              <i class="fa fa-google-plus fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+            </a>
+                        <!--Linkedin -->
+                        <a class="li-ic">
+              <i class="fa fa-linkedin fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+            </a>
+                        <!--Instagram-->
+                        <a class="ins-ic">
+              <i class="fa fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+            </a>
+
+                    </div>
+                </div>
+                <!-- Grid column -->
+
+            </div>
+            <!-- Grid row-->
+
+        </div>
+        <!-- Footer Elements -->
+
+        <!-- Copyright -->
+        <div class="footer-copyright  py-3">© 2018 Все права защищены:
+            <a href="https://mdbootstrap.com/bootstrap-tutorial/"> energolab.com.ua</a>
+        </div>
+        <!-- Copyright -->
+
+    </footer>
+    <!-- Footer -->
+    <script type="text/javascript" src="https://energolab.com.ua/sms.js"></script>
+    <script type="text/javascript" src="https://energolab.com.ua/navigation.js"></script>
+    <script type="text/javascript">
+        $(".examples-address-list li").click(function() {
+            $(".example-active").removeClass('example-active');
+            hash = $(this);
+            hash.addClass('example-active');
+            i = hash.attr('value');
+            object_change(i);
+        });
+
+        function object_selection() {
+            var i = $("#select option:selected").val();
+            object_change(i);
+        };
+
+        function object_change(number) {
+            db = {
+                1: [172, 1.5, 2, 155, 2100, 3, 27, 'часа', 'дня', 'года'],
+                2: [80, 1, 2, 311, 1200, 6, 70, 'час', 'дня', 'лет'],
+                3: [154, 1.5, 3, 183, 2100, 2.5, 32, 'часа', 'дня', 'года'],
+                4: [70, 40, 1, 294, 1200, 5, 60, 'минут', 'день', 'года'],
+                5: [60, 1, 2, 252, 1100, 3, 45, 'час', 'дня', 'года'],
+                6: [250, 2, 1.5, 231, 3000, 4.5, 55, 'часa', 'дня', 'года'],
+            }
+
+            energo_str = 'https://energolab.com.ua/teplo_example'
+            var list = $('.number');
+            var numAnim = [0, 0, 0, 0, 0, 0, 0];
+            for (var i = 0; i < list.length; i++) {
+                numAnim[i] = new CountUp(i + 1 + '', 0, db[number][i]);
+                if (!numAnim[i].error) {
+                    numAnim[i].start();
+                } else {
+                    console.error(numAnim[i].error);
+                }
+            }
+            $('#time-audit').text(db[number][7]);
+            $('#time-audit2').text(db[number][8]);
+            $('#time-occupy').text(db[number][9]);
+            $('.examples-image-box img').attr('src', energo_str + number + '.png');
+        };
+    </script>
+</body>
+
+</html>

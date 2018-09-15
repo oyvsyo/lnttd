@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <!-- <link rel="stylesheet" href="https://energolab.com.ua/style.css"> -->
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-60184544-3"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -185,10 +186,14 @@
                         <h1>Энергоаудит</h1>
                     </summary>
                     <div class="panel-body">
-                        <p>Энергоаудит – комплексный подход к обследованию объекта с целью выявления его технического состояния и оценки уровня энергоэффективности, разработки, согласования и внедрения плана по оптимизации и уменьшению энергопотребления.
-                            Компанией проводятся энергоаудиты зданий, коттеджей, ОСМД, ресторанов, предприятий, заводов, ограждающих конструкций, инженерных систем, систем учета, изготовление энергопаспортов зданий и энергетических сертификатов.
+                        <p><b>Энергоаудит</b> - комплексный подход к обследованию объекта с целью выявления его технического состояния и оценки уровня энергоэффективности, разработки, согласования и внедрения <b>плана по оптимизации и уменьшению энергопотребления.</b>
                         </p>
-                        <p>Компанией проводятся энергоаудиты зданий, коттеджей, ОСМД, ресторанов, предприятий, заводов, ограждающих конструкций, инженерных систем, систем учета, изготовление энергопаспортов зданий и энергетических сертификатов.
+                        <p>Энергетические аудиты зданий и сооружений - это подробные <b>инструментальные и аналитические</b> обследования, которые определяют:
+                            <ul style="text-align: left;">
+                                <li>Где и как происходит потеря энергии в здании.</li>
+                                <li>Какие системы работают неэффективно.</li>
+                                <li>Какие экономически эффективные меры могут быть приняты, чтобы сделать помещение более комфортным, энергоэффективным и менее энергозатратным.</li>
+                            </ul>
                         </p>
                         <details class="main-goals">
                             <summary>Основные цели энергоаудита:</summary>
@@ -576,184 +581,8 @@
         };
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASdqwQMJljaG8hmb97eWLdDaitzqdcjNU&callback=initMap" async defer></script>
-    <script type="text/javascript">
-        function sms() {
-            var name = $('input#name').val();
-            var phone = $('input#phone').val();
-            var reg_email = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
-            var reg_phone = /^\+?([0-9]{2})\)?[-. ]?([0-9]{4})[-. ]?([0-9]{4})$/;
-            var stripped = phone.replace(/[\(\)\.\-\+\ ]/g, '');
-            if (name != '') {
-                if (stripped != '') {
-                    if (!(isNaN(parseInt(stripped)))) {
-                        if ((stripped.length == 10) || (stripped.length == 12)) {
-                            sendForm(name, phone);
-                        } else {
-                            sendFormMessage("Телефон должен содержать 10 или 12 цифр", "red");
-                        };
-                    } else {
-                        sendFormMessage("Введите телефон в формате +380 (__) ___ __ __", "red");
-                    };
-                } else {
-                    sendFormMessage("Введите Ваш телефон", "red");
-                };
-            } else {
-                sendFormMessage("Введите имя", "red");
-            };
-        };
-
-        function sendFormMessage(text, color = "black") {
-            $("#resp").remove();
-            $("form").append('<p id="resp" style="color: ' + color + '">' + text + '</p>');
-        };
-
-        function sendForm(name, phone) {
-            $.ajax({
-                type: 'POST',
-                url: 'sms/',
-                data: {
-                    name: name,
-                    phone: phone,
-                },
-                // if sucess post request
-                success: function(json) {
-                    sendFormMessage("Ваша заявка отправлена");
-                    $("form").trigger("reset");
-                    // console.log(json);
-                    window.location = 'https://energolab.com.ua'
-                },
-                // if unsucess post request
-                error: function(xhr, errmsg, err) {
-                    sendFormMessage("Произошла ошибка соединения с серверами. Пожалуйста, попробуйте позже", "")
-                    console.log(xhr.status + ": " + xhr.responseText);
-                }
-            });
-        };
-    </script>
-    <script>
-        $(document).ready(function() {
-            $('i.glyphicon-thumbs-up, i.glyphicon-thumbs-down').click(function() {
-                var $this = $(this),
-                    c = $this.data('count');
-                if (!c) c = 0;
-                c++;
-                $this.data('count', c);
-                $('#' + this.id + '-bs3').html(c);
-            });
-            $(document).delegate('*[data-toggle="lightbox"]', 'click', function(event) {
-                event.preventDefault();
-                $(this).ekkoLightbox();
-            });
-        });
-    </script>
-    <script>
-        $(document).ready(function() {
-            var offset = 66;
-            $('body').scrollspy({
-                target: ".navbar",
-                offset: offset
-            });
-            $("a.navigation").on('click', function(event) {
-                if (this.hash !== "") {
-                    console.log(this.hash);
-                    var hash = this.hash;
-                    event.preventDefault();
-
-                    $('html, body').animate({
-                        scrollTop: $(hash).offset().top - offset + 30
-                    }, 1000);
-                    if ($(document).width() <= 992) {
-                        setTimeout(function() {
-                            $(".navbar-collapse").collapse('hide');
-                        }, 500);
-                    };
-                };
-            });
-
-            $("#contacts button").click(function() {
-                $('html, body').animate({
-                    scrollTop: $("#map").offset().top - 65
-                }, 1000);
-            });
-
-            var nav_li_active = "#25b976";
-            $(".btn-phone").click(function() {
-                for (i = 0; i < 4; i++) {
-                    $("#call").animate({
-                        outlineColor: nav_li_active
-                    }).animate({
-                        outlineColor: '#ffffff'
-                    });
-                };
-            });
-
-            // for sticky form on resizable screen
-
-            if ($(document).width() <= 767) {
-                $('#services-row').removeClass('row-eq-height');
-                $("#call").trigger("sticky_kit:detach");
-            } else {
-                $('#services-row').addClass('row-eq-height');
-                $("#call").stick_in_parent({
-                    offset_top: 65
-                });
-            };
-
-            $(window).resize(function() {
-                if ($(document).width() <= 767) {
-                    $('#services-row').removeClass('row-eq-height');
-                    $("#call").trigger("sticky_kit:detach");
-                } else {
-                    $('#services-row').addClass('row-eq-height');
-                    $("#call").stick_in_parent({
-                        offset_top: 65
-                    });
-                };
-            });
-
-            $(".call-icon").click(function() {
-                for (i = 0; i < 4; i++) {
-                    $("#call h4").animate({
-                        color: nav_li_active
-                    }).animate({
-                        color: '#000'
-                    });
-                };
-                $('html, body').animate({
-                    scrollTop: $("#call").offset().top - 65
-                }, 1000);
-            });
-
-            $("#scheme-button").click(function() {
-                for (i = 0; i < 4; i++) {
-                    $("#call h4").animate({
-                        color: nav_li_active
-                    }).animate({
-                        color: '#000'
-                    });
-                };
-                $('html, body').animate({
-                    scrollTop: $("#call").offset().top - 65
-                }, 1000);
-            });
-
-        });
-    </script>
-    <script>
-        // colapse navbar on scroll
-        $(document).ready(function() {
-            // Run function when scrolling
-            $(window).scroll(function() {
-                // console.log($('nav').offset().top);
-                if ($(".navbar-collapse").hasClass("in")) {
-                    setTimeout(function() {
-                        // $('.navbar-toggle').click();
-                        $(".navbar-collapse").collapse('hide');
-                    }, 500);
-                };
-            });
-        });
-    </script>
+    <script type="text/javascript" src="https://energolab.com.ua/sms.js"></script>
+    <script type="text/javascript" src="https://energolab.com.ua/navigation.js"></script>
 </body>
 
 </html>

@@ -13,7 +13,7 @@
         gtag('js', new Date());
         gtag('config', 'UA-60184544-3');
     </script>
-    <title>Пример Енергоаудит</title>
+    <title>Пример Теплоаудит</title>
     <meta charset="utf-8">
     <meta name="google-site-verification" content="enJjxWancqyqX6vmVHo3SxMuZz3TQbB0B8R6SQ1tnpo" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <!-- <link rel="stylesheet" href="https://energolab.com.ua/style.css"> -->
     <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="https://oyvsyo.github.io/lnttd/style.css"> -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-60184544-3"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -97,14 +98,14 @@
 
 
     <div class="container section" id="examples">
-        <h3>Енергоаудит</h3>
+        <h3>Теплоаудит</h3>
         <div class="row" style="padding-top: 30px;">
             <div class="col-sm-4 col-md-4 top-icons">
                 <div class="icon">
                     <img src="http://svgshare.com/i/2sn.svg" alt="5 минут">
                 </div>
                 <div class="icons">
-                    <p><b>5 минут</b> - среднее время обратного звонка от наших менеджеров после оставленной заявки</p>
+                    <p>Наглядная визуализация состояния энергоэффективности здания, выявление 100% теплопотерь</p>
                 </div>
             </div>
             <div class="col-sm-4 col-md-4 top-icons" style="min-height:269px;">
@@ -112,7 +113,7 @@
                     <img src="http://svgshare.com/i/2rQ.svg" alt="7 дней">
                 </div>
                 <div class="icons">
-                    <p><b>7 дней</b> - максимальный срок полного выполнения работ</p>
+                    <p>Разработка индивидуальной "дорожной карты" по устранению найденных недостатков</p>
                 </div>
             </div>
             <div class="col-sm-4 col-md-4 top-icons">
@@ -120,7 +121,7 @@
                     <img src="http://svgshare.com/i/2s8.svg" alt="70%">
                 </div>
                 <div class="icons">
-                    <p>Экономия до <b>70%</b> энергоресурсов после работы наших специалистов</p>
+                    <p>Помощь в создании комфортных показателей микроклимата и уменьшении теплопотерь</p>
                 </div>
             </div>
         </div>
@@ -153,8 +154,8 @@
         </div>
         <h3>Пример</h3>
         <div class="row examples-box">
-            <div class="col-lg-6 col-md-6 col-sm-8  col-xs-12 examples-image-box">
-                <img class="img-responsive" src="/Users/oyvsyo/proj/sites/hudozhnik/examples_jobs/energo_example_1.jpg" alt="">
+            <div class="col-lg-6 col-md-6 col-sm-8 col-xs-12 examples-image-box">
+                <img class="img-responsive" src="https://energolab.com.ua/teplo_example1.png" alt="">
             </div>
             <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 examples-info-box">
                 <ul style="list-style-type: none;">
@@ -361,19 +362,14 @@
     <script>
         $(document).ready(function() {
             db = {
-                1: [1, 2, 3, 4, 5],
+                1: [154, 183, 3, 4, 5],
                 2: [11, 21, 31, 41, 51],
                 3: [12, 22, 32, 42, 52],
                 4: [12, 22, 32, 42, 52],
                 5: [12, 22, 32, 42, 52]
             }
-            db_img = {
-                1: 'http://energolab.com.ua/1prilad-min.jpg',
-                2: 'http://prometeyndt.ru/upload/filemanager/tt100.gif',
-                3: 'http://energolab.com.ua/prilad3-min.jpg',
-                4: 'http://energolab.com.ua/prilad4-min.jpg',
-                5: 'http://energolab.com.ua/prilad5-min.jpg',
-            }
+
+            energo_str = 'https://energolab.com.ua/teplo_example'
 
             $(".examples-address-list li").click(function() {
                 $(".example-active").removeClass('example-active');
@@ -382,8 +378,6 @@
                 var list = $('.examples-info-box span');
                 var numAnim = [0,0,0,0,0];
                 for (var i = 0; i < list.length; i++) {
-                    // list[i].nnerHTML = db[hash.attr('value')][i];
-                    // $(list[i]).text(db[hash.attr('value')][i]);
                     numAnim[i] = new CountUp(i+1+'', 0, db[hash.attr('value')][i]);
                     if (!numAnim[i].error) {
                         numAnim[i].start();
@@ -392,7 +386,7 @@
                     }
                 }
 
-                $('.examples-image-box img').attr('src', db_img[hash.attr('value')]);
+                $('.examples-image-box img').attr('src', energo_str+hash.attr('value')+'.png');
             });
         });
     </script>
