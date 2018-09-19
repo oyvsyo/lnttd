@@ -96,68 +96,6 @@
         </div>
 
     </div>
-
-
-    <script>
-        $(document).ready(function() {
-            $('body').scrollspy({
-                target: ".navbar",
-                offset: 55
-            });
-            $("a.navigation").on('click', function(event) {
-                if (this.hash !== "") {
-                    var hash = this.hash;
-                    event.preventDefault();
-
-                    $('html, body').animate({
-                        scrollTop: $(hash).offset().top - 55
-                    }, 1000, function() {
-                        window.location.hash = hash;
-                    });
-                    if ($(document).width() <= 992) {
-                        setTimeout(function() {
-                            $('.navbar-toggle').click();
-                        }, 500);
-                    };
-                };
-            });
-            $("#contacts button").click(function() {
-                $('html, body').animate({
-                    scrollTop: $("#map").offset().top
-                }, 1000);
-            });
-
-            var nav_li_active = "#25b976";
-            $(".btn-phone").click(function() {
-                for (i = 0; i < 4; i++) {
-                    $("#call").animate({
-                        outlineColor: nav_li_active
-                    }).animate({
-                        outlineColor: '#ffffff'
-                    });
-                };
-            });
-            $(".call-icon").click(function() {
-                for (i = 0; i < 4; i++) {
-                    $("#call h4").animate({
-                        color: nav_li_active
-                    }).animate({
-                        color: '#000'
-                    });
-                };
-                $('html, body').animate({
-                    scrollTop: $("#call").offset().top - 66
-                }, 1000);
-            });
-            $(".container:not(.lalka)").click(function() {
-                if ($(".navbar-collapse").hasClass("in")) {
-                    setTimeout(function() {
-                        $('.navbar-toggle').click();
-                    }, 500);
-                };
-            });
-        });
-    </script>
     <footer class="page-footer font-small cyan darken-3">
 
         <!-- Footer Elements -->
@@ -198,21 +136,22 @@
             <!-- Grid row-->
 
         </div>
-        <div id="sidebar">
 
-            <a class="call-icon" href="#" id="call-sticky">
-                    <img  class="transition shadow-box call-sticky" style="width: 65px;" src="https://energolab.com.ua/phone-icon.svg" alt="Оставить заявку">
-            </a>
-        </div>
         <!-- Footer Elements -->
 
         <!-- Copyright -->
         <div class="footer-copyright  py-3">© 2018 Все права защищены:
-            <a href="https://mdbootstrap.com/bootstrap-tutorial/"> energolab.com.ua</a>
+            <a href="https://energolab.com.ua"> energolab.com.ua</a>
         </div>
         <!-- Copyright -->
 
     </footer>
+    <div id="sidebar">
+
+        <a class="call-icon" href="#" id="call-sticky">
+                <img  class="transition shadow-box call-sticky" style="width: 65px;" src="https://energolab.com.ua/phone-icon.svg" alt="Оставить заявку">
+        </a>
+    </div>
     <!-- Footer -->
     <script type="text/javascript" src="https://energolab.com.ua/sms.js"></script>
     <script type="text/javascript" src="https://energolab.com.ua/navigation.js"></script>

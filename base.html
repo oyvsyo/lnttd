@@ -252,66 +252,64 @@
         </div>
     </div>
 
-    <script>
-        $(document).ready(function() {
-            $('body').scrollspy({
-                target: ".navbar",
-                offset: 55
-            });
-            $("a.navigation").on('click', function(event) {
-                if (this.hash !== "") {
-                    var hash = this.hash;
-                    event.preventDefault();
+        <!-- Footer -->
+        <footer class="page-footer font-small cyan darken-3">
 
-                    $('html, body').animate({
-                        scrollTop: $(hash).offset().top - 55
-                    }, 1000, function() {
-                        window.location.hash = hash;
-                    });
-                    if ($(document).width() <= 992) {
-                        setTimeout(function() {
-                            $('.navbar-toggle').click();
-                        }, 500);
-                    };
-                };
-            });
-            $("#contacts button").click(function() {
-                $('html, body').animate({
-                    scrollTop: $("#map").offset().top
-                }, 1000);
-            });
+            <!-- Footer Elements -->
+            <div class="container">
 
-            var nav_li_active = "#25b976";
-            $(".btn-phone").click(function() {
-                for (i = 0; i < 4; i++) {
-                    $("#call").animate({
-                        outlineColor: nav_li_active
-                    }).animate({
-                        outlineColor: '#ffffff'
-                    });
-                };
-            });
-            $(".call-icon").click(function() {
-                for (i = 0; i < 4; i++) {
-                    $("#call h4").animate({
-                        color: nav_li_active
-                    }).animate({
-                        color: '#000'
-                    });
-                };
-                $('html, body').animate({
-                    scrollTop: $("#call").offset().top - 66
-                }, 1000);
-            });
-            $(".container:not(.lalka)").click(function() {
-                if ($(".navbar-collapse").hasClass("in")) {
-                    setTimeout(function() {
-                        $('.navbar-toggle').click();
-                    }, 500);
-                };
-            });
-        });
-    </script>
+                <!-- Grid row-->
+                <div class="row">
+                    <!-- Grid column -->
+                    <div class="col-md-12 py-5">
+                        <div class="mb-10  social-icon-wrapper">
+
+                            <!-- Facebook -->
+                            <a class="fb-ic">
+                  <i class="fa fa-facebook fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                </a>
+                            <!-- Twitter -->
+                            <a class="tw-ic">
+                  <i class="fa fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                </a>
+                            <!-- Google +-->
+                            <a class="gplus-ic">
+                  <i class="fa fa-google-plus fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                </a>
+                            <!--Linkedin -->
+                            <a class="li-ic">
+                  <i class="fa fa-linkedin fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                </a>
+                            <!--Instagram-->
+                            <a class="ins-ic">
+                  <i class="fa fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                </a>
+
+                        </div>
+                    </div>
+                    <!-- Grid column -->
+
+                </div>
+                <!-- Grid row-->
+
+            </div>
+            <!-- Footer Elements -->
+
+            <!-- Copyright -->
+            <div class="footer-copyright  py-3">© 2018 Все права защищены:
+                <a href="https://energolab.com.ua"> energolab.com.ua</a>
+            </div>
+            <!-- Copyright -->
+
+        </footer>
+        <div id="sidebar">
+
+            <a class="call-icon" href="#" id="call-sticky">
+                    <img  class="transition shadow-box call-sticky" style="width: 65px;" src="https://energolab.com.ua/phone-icon.svg" alt="Оставить заявку">
+            </a>
+        </div>
+        <script type="text/javascript" src="https://energolab.com.ua/sms.js"></script>
+        <script type="text/javascript" src="https://energolab.com.ua/navigation.js"></script>
 </body>
 
 </html>

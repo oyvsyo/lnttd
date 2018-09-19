@@ -1588,4 +1588,59 @@ i.fa:hover {
 }
 
 
-/* --------------------------------- */
+/* ------------ test styles -------------------- */
+.option {
+    border: solid 1px var(--grey);
+    border-radius: 5px;
+}
+.active-option {
+    border: 1px solid var(--nav-li-active);
+    border-radius: 5px;
+}
+
+.option-true {
+    background-color: var(--nav-li-active);
+    color: white;
+}
+.active-option.option-true:hover {
+    background-color: var(--nav-li-active);
+    color: white;
+}
+.option-true:hover {
+    background-color: var(--nav-li-active);
+    color: white;
+}
+
+.option-false {
+    color: red;
+}
+
+.test-box {
+    padding-right: 15%;
+    padding-left: 15%;
+}
+@media (max-width: 767px) {
+    .test-box {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+}
+.test-question {
+    font-size: 120%;
+}
+.test-options {
+    padding-top: 20px;
+}
+.test-options {
+    border: 1px solid white;
+    border-radius: 5px;
+}
+.test-options div{
+    border-radius: 5px;
+}
+.test-options div:hover {
+    background-color: var(--grey);
+}
+.test-options div.option-true:hover {
+    background-color: var(--nav-li-active);
+}
