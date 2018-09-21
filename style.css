@@ -25,11 +25,17 @@
     src: url("path/GraublauWebBold.otf") format("opentype");
 }
 
+html {
+  height: 100%;
+  /* box-sizing: border-box; */
+}
+
 body {
     font-family: Verdana, Arial, Helvetica, sans-serif;
     font-size: 140%;
     position: relative;
     line-height: 1.6;
+    /* min-height: 100%; */
 }
 
 .shadow-box {
@@ -915,7 +921,7 @@ h5 {
     color: white;
 }
 
-@import "http://fonts.googleapis.com/css?family=Roboto:300,400,500,700";
+/* @import "http://fonts.googleapis.com/css?family=Roboto:300,400,500,700";
 .mt40 {
     margin-top: 40px;
 }
@@ -1109,7 +1115,7 @@ h5 {
 
 .ekko-lightbox .modal-footer {
     text-align: left
-}
+} */
 
 /* DROPDOWN */
 
@@ -1436,6 +1442,10 @@ li.example-active:hover {
 /* 0======= footer  ==========0 */
 
 footer {
+    position: absolute;
+    right: 0;
+    /* bottom: 0; */
+    left: 0;
     background-color: var(--grey);
     text-align: center;
     padding-top: 20px;
@@ -1592,6 +1602,8 @@ i.fa:hover {
 .option {
     border: solid 1px var(--grey);
     border-radius: 5px;
+    margin-bottom: 5px;
+    padding: 5px;
 }
 .active-option {
     border: 1px solid var(--nav-li-active);
@@ -1643,4 +1655,7 @@ i.fa:hover {
 }
 .test-options div.option-true:hover {
     background-color: var(--nav-li-active);
+}
+.test-commet {
+    padding: 5px;
 }
